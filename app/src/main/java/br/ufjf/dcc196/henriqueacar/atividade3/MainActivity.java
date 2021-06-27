@@ -39,5 +39,35 @@ public class MainActivity extends AppCompatActivity {
                 resultado.setText(String.valueOf(soma));
             }
         });
+
+        botaoSub.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String temp1 = numero1.getText().toString();
+                String temp2 = numero2.getText().toString();
+                float sub = Float.parseFloat(temp1) - Float.parseFloat(temp2);
+                resultado.setText(String.valueOf(sub));
+            }
+        });
+
+        botaoMult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String temp1 = numero1.getText().toString();
+                String temp2 = numero2.getText().toString();
+                float mult = Float.parseFloat(temp1) * Float.parseFloat(temp2);
+                resultado.setText(String.valueOf(mult));
+            }
+        });
+
+        botaoDiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String temp1 = numero1.getText().toString();
+                String temp2 = numero2.getText().toString();
+                float div = Float.parseFloat(temp1) / Float.parseFloat(temp2);
+                resultado.setText(String.valueOf(div));
+            }
+        });
     }
 }
