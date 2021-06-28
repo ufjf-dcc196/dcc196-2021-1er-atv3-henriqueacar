@@ -65,8 +65,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String temp1 = numero1.getText().toString();
                 String temp2 = numero2.getText().toString();
-                float div = Float.parseFloat(temp1) / Float.parseFloat(temp2);
-                resultado.setText(String.valueOf(div));
+                //checa se o divisor nao eh 0
+                if(!"0".equals(temp2)){
+                    float div = Float.parseFloat(temp1) / Float.parseFloat(temp2);
+                    resultado.setText(String.valueOf(div));
+                }
+                else{
+                    resultado.setText("Não é possível dividir por 0!");
+                }
+
             }
         });
     }
